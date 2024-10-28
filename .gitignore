@@ -1,0 +1,7 @@
+venv/
+myvenv/
+.env/
+*.pyc
+__pycache__/
+.vscode/
+firebase_config.json

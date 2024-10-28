@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos</title>
+</head>
+<body>
+    <h1>Productos</h1>
+
+    <form method="GET" action="{{ url_for('productos') }}">
+        <label for="nombre">Buscar por nombre:</label>
+        <input type="text" name="nombre" id="nombre" value="{{ filtros['nombre'] }}" placeholder="Nombre del producto">
+
+        <label for="categoria">Categoría:</label>
+        <select name="categoria" id="categoria">
+            <option value="">Todas</option>
+            {% for cat in categorias %}
+                <option value="{{ cat }}" {% if filtros['categoria'] == cat %}selected{% endif %}>{{ cat }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="precio_min">Precio mínimo:</label>
+        <input type="number" name="precio_min" id="precio_min" step="0.01" value="{{ filtros['precio_min'] }}">
+
+        <label for="precio_max">Precio máximo:</label>
+        <input type="number" name="precio_max" id="precio_max" step="0.01" value="{{ filtros['precio_max'] }}">
+        <button type="submit">Buscar</button>
+    </form>
+    <ul>
+        {% for producto in productos %}
+            <li>
+                <a href="{{ url_for('producto_detalle', id=producto.id) }}">{{ producto.nombre }}</a> - ${{ producto.precio }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Productos</title>
+</head>
+<body>
+    <h1>Productos</h1>
+    <a href="{{ url_for('admin_agregar_producto') }}">Agregar Producto</a>
+    <ul>
+        {% for producto in productos %}
+            <li>
+                {{ producto.nombre }} - ${{ producto.precio }}
+                <a href="{{ url_for('admin_editar_producto', id=producto.id) }}">Editar</a>
+                <a href="{{ url_for('admin_eliminar_producto_confirmacion', id=producto.id) }}">Eliminar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
