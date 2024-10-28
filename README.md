@@ -46,10 +46,3 @@ Para ejecutar este proyecto, asegúrate de tener instalados los siguientes progr
 5. Ejecuta la aplicación:
    ```bash
     flask run
-
-
-
-
-    
-
-
