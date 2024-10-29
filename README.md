@@ -37,7 +37,7 @@ Para ejecutar este proyecto, asegúrate de tener instalados los siguientes progr
 
 3. (Opcional) Activa el entorno virtual:
    ```bash
-    source myvenv/Scripts/activate
+    source venv/Scripts/activate
 
 4. Instala las dependencias necesarias:
    ```bash
