@@ -53,6 +53,7 @@ def admin_agregar_producto():
             'categoria': request.form['categoria'],
             'precio': float(request.form['precio']),
             'descripcion': request.form['descripcion'],
+            'cantidad'  : request.form['cantidad'],
             'imagen_url': request.form['imagen_url']
         }
         db.collection('productos').add(producto)
@@ -71,6 +72,7 @@ def admin_editar_producto(id):
             'categoria': request.form['categoria'],
             'precio': float(request.form['precio']),
             'descripcion': request.form['descripcion'],
+            'cantidad'  : int(request.form['cantidad']),
             'imagen_url': request.form['imagen_url']
         })
         return redirect(url_for('admin_productos'))
