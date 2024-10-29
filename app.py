@@ -53,7 +53,7 @@ def admin_agregar_producto():
             'categoria': request.form['categoria'],
             'precio': float(request.form['precio']),
             'descripcion': request.form['descripcion'],
-            'cantidad'  : request.form['cantidad'],
+            'cantidad'  : int(request.form['cantidad']),
             'imagen_url': request.form['imagen_url']
         }
         db.collection('productos').add(producto)
