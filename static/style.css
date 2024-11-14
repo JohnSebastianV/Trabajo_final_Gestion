@@ -41,7 +41,7 @@ form input {
 }
 
 form input::placeholder {
-    color: #E4E4E4;
+    color: #000000;
 }
 
 form button {
@@ -158,3 +158,102 @@ ul li a {
 ul li a:hover {
     color: #0f4c75;
 }
+/* Estilos para el cuerpo */
+body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: normal;
+    font-size: 100%;
+    color: #1b262c;
+    margin: 0;
+    background-color: #0f4c75;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    font-size: 2.5em;
+    color: #bbe1fa;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Formulario de filtros */
+form {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #3282b8;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-size: 1em;
+    color: #bbe1fa;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1em;
+    color: #1b262c;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+form input::placeholder {
+    color: #E4E4E4;
+}
+
+form button {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1em;
+    color: #1b262c;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #bbe1fa;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #0f4c75;
+    color: #bbe1fa;
+}
+
+/* Lista de productos */
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+ul li {
+    background-color: #bbe1fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li a {
+    font-size: 1.1em;
+    color: #1b262c;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #0f4c75;
+}
+
