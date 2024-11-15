@@ -3,6 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ producto.nombre if producto else 'Agregar Producto' }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #003366;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #002244;
+        }
+
+        form {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+        }
+
+        form textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        form button {
+            background-color: #0066cc;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #004080;
+        }
+    </style>
 </head>
 <body>
     <h1>{{ producto.nombre if producto else 'Agregar Producto' }}</h1>

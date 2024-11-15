@@ -3,6 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin - Productos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #003366;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #002244;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #004080;
+        }
+
+        a:visited {
+            color: #003366;
+        }
+
+        ul {
+            list-style: none;
+            width: 100%;
+            max-width: 600px;
+            background-color: #e6f2ff;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        li {
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li a {
+            margin-left: 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #0066cc;
+            color: #ffffff;
+        }
+
+        li a:hover {
+            background-color: #004080;
+        }
+
+        a[href="{{ url_for('admin_agregar_producto') }}"] {
+            background-color: #004080;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        a[href="{{ url_for('admin_agregar_producto') }}"]:hover {
+            background-color: #002244;
+        }
+    </style>
 </head>
 <body>
     <h1>Productos</h1>

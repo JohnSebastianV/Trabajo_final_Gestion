@@ -4,12 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Producto</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff;
+            color: #003366;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .product-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .product-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #002244;
+            text-align: center;
+        }
+
+        .product-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .product-details p {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .product-details span {
+            font-weight: bold;
+        }
+
+        .product-price {
+            color: #0066cc;
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
-
     <div class="product-container">
-        <h1>{{ producto.nombre }}</h1>
+        <h1 class="product-title">{{ producto.nombre }}</h1>
 
         <!-- Contenedor para imagen y detalles en columnas -->
         <div class="product-content">
@@ -25,6 +91,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>
